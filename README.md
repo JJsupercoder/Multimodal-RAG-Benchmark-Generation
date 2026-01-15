@@ -93,8 +93,8 @@ source .venv/bin/activate        # macOS / Linux
 
 Install typical dependencies (adjust if your repo has requirements.txt):
 
-pip install -r requirements.txt
-# or manually:
+pip install -r requirements.txt 
+(# or manually):
 pip install simdjson openai transformers torch scikit-learn matplotlib numpy spacy tqdm ddgs
 
 
@@ -106,7 +106,7 @@ python -m spacy download en_core_web_md
 Set OpenAI API key:
 
 export OPENAI_API_KEY="sk-..."
-# or in Windows PowerShell:
+(# or in Windows PowerShell):
 setx OPENAI_API_KEY "sk-..."
 
 How to run 
@@ -148,7 +148,7 @@ openai_usage_log.csv — token usage and cost summary
 Create an eval batch that asks the model (or judge LLM) to score candidate answers:
 
 python create_eval_batch.py
-# creates: eval_batch_ITT_diff.jsonl, eval_metadata_ITT_diff.json
+(# creates: eval_batch_ITT_diff.jsonl, eval_metadata_ITT_diff.json)
 
 
 6) Run eval batch (judge LLM)
