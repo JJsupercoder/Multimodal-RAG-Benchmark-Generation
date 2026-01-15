@@ -1,0 +1,2 @@
+{"id": "batch_req_68ae5afa22688190b46ea23f6bed0530", "custom_id": "d5bebe560dba11ecb1e81171463288e9_geval", "response": {"status_code": 404, "request_id": "", "body": {"detail": "Not Found"}}, "error": null}
+{"id": "batch_req_68ae5afb92f081909de57b02f9ddc8f3", "custom_id": "d5bf45e20dba11ecb1e81171463288e9_geval", "response": {"status_code": 404, "request_id": "", "body": {"detail": "Not Found"}}, "error": null}
