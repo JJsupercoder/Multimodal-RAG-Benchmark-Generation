@@ -14,6 +14,9 @@ This repository contains code to (a) build a deterministic multimodal evaluation
 8. Compute automatic metrics: recall, retrieval F1, G-Eval aggregation, and reproducibility graphs (CLIP).
 9. Provide insights into the reproducibility of the generation of the benchmark with the same parameters.
 
+# Outputs -
+The outputs are the datasets (.json files) for the mode specified in the parameter, i.e. for IT, ITT_same, ITT_diff and IIT. To better visualize the images, the questions, and the generated responses, there is a Word file which contains the images and the QA for each entry in the dataset. 
+
 # Files & short descriptions -
 ## Dataset / batch creation
 
