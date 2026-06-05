@@ -106,15 +106,18 @@ Output: WebQA_dynamic_dataset_*.json
 
 2. Create the dataset generation batch
 Create the QA dataset batch that the LLM will be tested on-
+
 CMD: python create_batch.py
 Output: sample_batch.jsonl (or mode-specific such as sample_batch_ITT_diff.jsonl) and possibly sample_batch_<mode>_meta.json.
 
 3) Estimate cost (optional)
 Estimate API token usage and cost
+
 CMD: python estimate_batch_cost.py --batch sample_batch_<mode>.jsonl --model gpt-4o-mini
 
 4) Run the batch (submit to API)
 Submit the batch to the OpenAI API (sequential or batch endpoint), producing results and usage logs
+
 CMD: python run_batch.py --input sample_batch_<mode>.jsonl --output sample_batch_<mode>_results.jsonl
 Outputs:
 sample_batch_ITT_diff_results.jsonl — model responses
@@ -122,6 +125,7 @@ openai_usage_log.csv — token usage and cost summary
 
 5) Create evaluation batch (G-Eval) and metadata
 Create an eval batch that asks the model (or judge LLM) to score candidate answers
+
 CMD: python create_eval_batch.py
 Outputs:
 eval_batch_<mode>.jsonl
@@ -129,18 +133,22 @@ eval_metadata_<mode>.json
 
 6) Run eval batch (judge LLM)
 Submit eval_batch_<mode>.jsonl to the judge model (e.g., GPT-4.1/G-Eval)
+
 CMD: python run_batch.py --input eval_batch_<mode>.jsonl --output eval_batch_<mode>_results.jsonl
 
 7) Compute automatic metrics -
 
 Keyword recall:
+
 CMD: python evaluation_recall_score.py --metadata eval_metadata_<mode>.json --results eval_batch_<mode>_results.jsonl
 
 Retrieval F1:
+
 CMD: python evaluation_retrieval_fl.py --metadata eval_metadata_<mode>.json --results eval_batch_<mode>_results.jsonl
 
 Aggregate G-Eval:
-python evaluation_Geval_score.py --geval_results eval_batch_<mode>_results.jsonl
+
+CMD: python evaluation_Geval_score.py --geval_results eval_batch_<mode>_results.jsonl
 
 8) Reproducibility graphs (CLIP)
 If you have two result runs (run A and run B), compare them:
