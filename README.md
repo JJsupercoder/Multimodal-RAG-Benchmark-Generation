@@ -97,6 +97,7 @@ https://webqna.github.io/
 ## Main steps
 ### Easy way -
 CMD: python main.py
+
 This actually does the below steps, except for producing the reproducibility graph, for which you need to compare 2 consecutive runs with the same parameters. 
 
 ### Detailed way -
