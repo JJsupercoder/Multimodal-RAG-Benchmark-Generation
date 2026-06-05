@@ -1,7 +1,7 @@
 README.txt
 # Project overview
 
-This repository contains code to (a) build a deterministic multimodal evaluation dataset from WebQA, (b) create batch JSONL requests for LLMs, (c) run those batches against the ChatGPT Batch API  and (d) evaluate results with multiple metrics (LLM-based G-Eval, keyword recall, retrieval F1) and reproducibility graphs (CLIP-based). The pipeline is designed to be deterministic (seeded RNG) and reproducible by using a set of parameters.
+This repository contains code to (a) build a deterministic multimodal evaluation dataset from WebQA, (b) create batch JSONL requests for the ChatGPT Batch API, (c) run those batches using the ChatGPT Batch API  and (d) evaluate results with multiple metrics (LLM-based G-Eval, keyword recall, retrieval F1) and reproducibility graphs (CLIP-based). The pipeline is designed to be deterministic (seeded RNG) and reproducible by using a set of parameters.
 
 # Main workflow (high-level):
 1. Build/prepare the dataset / candidate pools (if not already available).
